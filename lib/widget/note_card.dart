@@ -34,7 +34,7 @@ class NoteCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Pick colors based on the current theme
+    
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
     final color = isDarkMode
         ? _darkColors[index % _darkColors.length]
@@ -94,7 +94,7 @@ class NoteCardWidget extends StatelessWidget {
     );
   }
 
-  /// To return different height for different widgets
+
   double getMinHeight(int index) {
     switch (index % 4) {
       case 0:
