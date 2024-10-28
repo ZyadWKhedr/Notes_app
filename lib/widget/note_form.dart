@@ -62,7 +62,7 @@ class _NoteFormWidgetState extends State<NoteFormWidget> {
 
   @override
   Widget build(BuildContext context) {
-    // Get the current theme
+
     final themeProvider = Provider.of<ThemeProvider>(context);
     final isDarkMode = themeProvider.isDarkMode;
 
