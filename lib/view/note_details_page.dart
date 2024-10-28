@@ -42,7 +42,7 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
     return Scaffold(
       appBar: AppBar(
         actions: [editButton(), deleteButton()],
-        backgroundColor: themeProvider.isDarkMode ? Colors.black : Colors.blue, // Set AppBar color based on theme
+        backgroundColor: themeProvider.isDarkMode ? Colors.black : Colors.blue, 
       ),
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
@@ -54,7 +54,7 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
                   Text(
                     note.title,
                     style: TextStyle(
-                      color: themeProvider.isDarkMode ? Colors.white : Colors.black, // Text color based on theme
+                      color: themeProvider.isDarkMode ? Colors.white : Colors.black, 
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -68,7 +68,7 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
                   Text(
                     note.description,
                     style: TextStyle(
-                      color: themeProvider.isDarkMode ? Colors.white70 : Colors.black54, // Description color based on theme
+                      color: themeProvider.isDarkMode ? Colors.white70 : Colors.black54, 
                       fontSize: 18,
                     ),
                   ),
