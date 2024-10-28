@@ -49,7 +49,7 @@ class _NotesPageState extends State<NotesPage> {
           style: TextStyle(fontSize: 24),
         ),
         actions: [
-          // Switch for toggling between dark mode and light mode
+         
           Switch(
             value: themeProvider.isDarkMode,
             onChanged: (value) {
