@@ -85,7 +85,7 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
         }
         Navigator.of(context).pop();
       } catch (e) {
-        // Handle error
+      
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Error saving note: $e')),
         );
@@ -94,7 +94,7 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
   }
 
   Future<void> addNote() async {
-    // Implement the logic to add a note to the database
+   
     final newNote = Note(
       id: null,
       isImportant: isImportant,
@@ -107,7 +107,7 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
   }
 
   Future<void> updateNote() async {
-    // Implement the logic to update the existing note in the database
+   
     final updatedNote = widget.note!.copyWith(
       isImportant: isImportant,
       number: number,
