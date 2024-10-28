@@ -10,7 +10,7 @@ class NoteFields {
 }
 
 class Note {
-  final int? id; // Nullable since it's auto-incremented by the database
+  final int? id; 
   final bool isImportant;
   final int number;
   final String title;
@@ -18,7 +18,7 @@ class Note {
   final DateTime createdTime;
 
   Note({
-    this.id, // Make id nullable
+    this.id, 
     required this.isImportant,
     required this.number,
     required this.title,
@@ -26,15 +26,15 @@ class Note {
     required this.createdTime,
   });
 
-  // Convert a Note object to a Map
+ 
   Map<String, dynamic> toMap() {
     return {
-      NoteFields.id: id, // Allow id to be null for new notes
+      NoteFields.id: id, 
       NoteFields.isImportant: isImportant ? 1 : 0,
       NoteFields.number: number,
       NoteFields.title: title,
       NoteFields.description: description,
-      NoteFields.createdTime: createdTime.toIso8601String(), // Save as string
+      NoteFields.createdTime: createdTime.toIso8601String(), 
     };
   }
 
@@ -56,10 +56,9 @@ class Note {
     );
   }
 
-  // Create a Note object from a Map (useful for retrieving from the database)
   static Note fromMap(Map<String, dynamic> map) {
     return Note(
-      id: map[NoteFields.id] as int?, // Handle null safety
+      id: map[NoteFields.id] as int?, 
       isImportant: map[NoteFields.isImportant] == 1,
       number: map[NoteFields.number] as int,
       title: map[NoteFields.title] as String,
